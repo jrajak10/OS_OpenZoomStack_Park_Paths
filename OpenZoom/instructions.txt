@@ -1,0 +1,88 @@
+OpenZoom Stack Instructions (to add park paths to the map)
+
+You can download a "Getting Started" guide here: https://www.ordnancesurvey.co.uk/business-and-government/help-and-support/products/os-open-zoomstack.html
+
+1. Download the Vector Tiles with this link: https://www.ordnancesurvey.co.uk/opendatadownload/products.html#ZMSTCK
+ Click on OS OpenZoomstack
+
+2. Create a Mapbox account.
+
+3. Once signed-in, click on Studio in the top right corner.
+
+4. Click on the Tilesets tab in the top
+right corner.
+Click on the New Tileset button.
+
+5. Click on Select a file
+
+6. Navigate to the OS_Open_Zoomstack.mbtiles file and click Open and then click Confirm.
+
+Your file will download after a few minutes.
+
+You will then need to set up the OS styles to get started in Mapbox studio.
+
+Mapbox GL Styles Instructions:
+
+1. Download and unzip the OS Open Zoomstack Stylesheets folder. You can also view the stylesheets on
+GitHub.
+OS Open Zoomstack - Getting Started Guide
+January 2019
+OFFICIAL
+© Ordnance Survey Ltd 2019 Page 9 of 34
+2. Copy the Map ID for your new Tileset by doing the following:
+a. In Mapbox Studio, click on the
+Tilesets tab in the top right corner.
+b. Scroll down until you see your new Tileset and click on the Menu button.
+c. Click on the clipboard icon to copy the Map ID.
+3. Open the folder of stylesheets that you downloaded in step 1 and navigate to Vector Tiles → Mapbox GL
+Styles where you'll find four styles (Road, Outdoor, Light and Night).
+4. Choose the style that you want to use and open the .json file (e.g. Outdoor.json) in a text editor.
+5. Find this block of code near the top of the file (line 46) and paste your Map ID where it says ADD-SOURCEURL-HERE:
+6. Save the .json file.
+OS Open Zoomstack - Getting Started Guide
+January 2019
+OFFICIAL
+© Ordnance Survey Ltd 2019 Page 10 of 34
+7. Go back to Mapbox Studio and click
+on the Styles tab.
+8. Click on the New style button.
+9. Click on the Upload button.
+10. Navigate to your newly saved style.json file (e.g. OS Outdoor.json) and click Open.
+The style will then load up in the Mapbox Studio style editor.
+This is an example of what your map will look like if you chose the Outdoor style.
+You may notice at this point that the symbols for Airports and Railway Stations aren’t appearing, so now we
+need to add them to our new map.
+11. Open the folder of stylesheets that you downloaded in step 1 and navigate to Vector Tiles → Mapbox GL
+Styles where you'll find a folder called os-open-zoomstack-symbols.
+OS Open Zoomstack - Getting Started Guide
+January 2019
+OFFICIAL
+© Ordnance Survey Ltd 2019 Page 11 of 34
+12. Open this folder, then drag and drop the 7 SVG files into Mapbox Studio (directly into your browser
+window).
+13. Click Confirm on the Upload images dialogue box.
+14. Mapbox Studio will recognise the images and you should now see Airport and Railway Station symbols. You can now customise your map.
+
+
+Adding park paths:
+
+1. On the top left hand of the page, click "Add Layer".
+2. On the rightmost column, there is a list of active sources. Click on Mapbox Streets V8. Then, click on 'road'.
+3. At the very top of the column, click "Style". You can now customise the colour of the path, and width.
+4. Once you are happy with your styles, go back to the left most column, road will be the top layer of your map. To hide the paths on the streets, and make it focus on the parks, move the road layer down. Move it so it is above woodland. If it is under woodland, or green space, you will not be able to see the paths as they will be below the woodland/green space layer, and hidden.
+5. Click "Publish" on the top right hand corner -> Publish.
+6. Click share. You will be using the bottom two links, 'Your style URL' and 'Your access token'.
+7. Go to this link: https://docs.mapbox.com/mapbox-gl-js/overview/
+8. You will see two codes. Cope and paste the first code into the <head> of your HTML file. This is the Javascript and CSS files.
+9. Below, there is another code. Copy the <div> code (first line) into the body of your HTML file. 
+10. There is also a <script> code below. Copy and paste this into your Javascript file (ignoring the opening and closing <script> tags.
+11. Copy the code from "Your style URL", and paste it into your JS file, replacing the style value in your map Object.
+12. Replace the access token (mapboxgl.accessToken) with the copy and pasted code from 'Your access token'. 
+13. You can also add centre and zoom keys. The centre value is the location co-ordinates [long, lat], and you can make them your own choice if you do not want the default. The zoom value is how much you want the map to be zoomed in.
+
+
+
+
+
+
+

@@ -1,1 +1,32 @@
-#mapid { height: 180px; }
+body {
+    background:#F0FFFF;
+    color: #FFF;
+}
+
+h1{
+    color: red;
+}
+
+#map{
+    height: 60%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 75px;
+   
+}
+
+#instructions{
+    width: 100%;
+    margin-top: 100px;
+}
+
+body {
+    background: #404040;
+    color: #f8f8f8;
+    font: 500 20px/26px 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  

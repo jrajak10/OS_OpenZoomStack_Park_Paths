@@ -1,17 +1,40 @@
+<HTML>
+
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-    crossorigin=""></script>
+  
+    <link rel = "stylesheet" href="styles.css">
+
+
+
+   
+    </script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet' />
 
 
 </head>
 
 <body>
-<h1>Hello World!</h1>
+    <h1>Hello World!</h1>
+    
+  
+  
 
-    <div id="mapid"></div>
+    <div id='map' class='map pad2'>Map</div>
+<div id = "instructions">
 
+    <ul><u>How to use the map</u>
+        <li>Zoom in: Double click on the map, or move two fingers down on the touchpad</li>
+        <li>Zoom out: Move your two fingers up on the touchpad</li>
+        <li>Rotate map: Click and move with two fingers</li>
+        <li>Reset map: Click the arrow icon on the top right hand corner. </li>
+    </ul>
+
+</div>
 </body>
+
+<script src="map.js">
+</script>
+
+</HTML>
+

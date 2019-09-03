@@ -1,0 +1,12 @@
+{
+  "name": "openzoom",
+  "version": "1.0.0",
+  "main": "map.js",
+  "scripts": {
+    "start": "map.js"
+  },
+  "author": "Johann",
+  "license": "ISC",
+  "keywords": [],
+  "description": "Openzoom Map"
+}
